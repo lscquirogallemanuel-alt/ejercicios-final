@@ -1,0 +1,138 @@
+# Ejercicio 1: Par o Impar
+num = int(input("Ingrese un número entero: "))
+if num % 2 == 0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
+
+# Ejercicio 2: Comparar tres números
+a = int(input("Ingrese el primer número: "))
+b = int(input("Ingrese el segundo número: "))
+c = int(input("Ingrese el tercer número: "))
+if a >= b and a >= c:
+    print("El mayor es:", a)
+elif b >= a and b >= c:
+    print("El mayor es:", b)
+else:
+    print("El mayor es:", c)
+
+# Ejercicio 3: Clasificación de edades
+edad = int(input("Ingrese su edad: "))
+if edad <= 12:
+    print("Niño")
+elif edad <= 17:
+    print("Adolescente")
+elif edad <= 64:
+    print("Adulto")
+else:
+    print("Adulto mayor")
+
+# Ejercicio 4: Aprobado o Reprobado con mención especial
+nota = float(input("Ingrese su calificación: "))
+if nota >= 90:
+    print("Aprobado con mención especial")
+elif nota >= 60:
+    print("Aprobado")
+else:
+    print("Reprobado")
+
+# Ejercicio 5: Calculadora básica
+num1 = float(input("Ingrese el primer número: "))
+operador = input("Ingrese el operador (+, -, *, /): ")
+num2 = float(input("Ingrese el segundo número: "))
+if operador == "+":
+    print("Resultado:", num1 + num2)
+elif operador == "-":
+    print("Resultado:", num1 - num2)
+elif operador == "*":
+    print("Resultado:", num1 * num2)
+elif operador == "/":
+    if num2 != 0:
+        print("Resultado:", num1 / num2)
+    else:
+        print("Error: división por cero.")
+else:
+    print("Operador no válido.")
+
+# Ejercicio 6: Mayor o menor de edad
+edad = int(input("Ingrese su edad: "))
+if edad >= 18:
+    print("Mayor de edad")
+else:
+    print("Menor de edad")
+
+# Ejercicio 7: Número positivo, negativo o cero
+num = float(input("Ingrese un número: "))
+if num > 0:
+    print("Positivo")
+elif num < 0:
+    print("Negativo")
+else:
+    print("Cero")
+
+# Ejercicio 8: Número divisible por 5
+num = int(input("Ingrese un número: "))
+if num % 5 == 0:
+    print("El número es divisible por 5")
+else:
+    print("El número no es divisible por 5")
+
+# Ejercicio 9: Raíz cuadrada posible
+import math
+num = float(input("Ingrese un número: "))
+if num >= 0:
+    print("La raíz cuadrada es:", math.sqrt(num))
+else:
+    print("No tiene raíz real.")
+
+# Ejercicio 10: Descuento por edad
+edad = int(input("Ingrese su edad: "))
+if edad < 12:
+    print("Descuento del 50%")
+elif edad > 65:
+    print("Descuento del 20%")
+else:
+    print("Sin descuento")
+
+# Ejercicio 11: Año bisiesto
+año = int(input("Ingrese un año: "))
+if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+    print("El año es bisiesto")
+else:
+    print("El año no es bisiesto")
+
+# Ejercicio 12: Paridad de tres números
+a = int(input("Ingrese el primer número: "))
+b = int(input("Ingrese el segundo número: "))
+c = int(input("Ingrese el tercer número: "))
+pares = (a % 2 == 0) + (b % 2 == 0) + (c % 2 == 0)
+if pares == 3:
+    print("Todos son pares")
+elif pares == 0:
+    print("Todos son impares")
+else:
+    print("Hay mezcla")
+
+# Ejercicio 13: Comparación de dos letras
+letra1 = input("Ingrese la primera letra: ")
+letra2 = input("Ingrese la segunda letra: ")
+if letra1 == letra2:
+    print("Son iguales")
+elif letra1 > letra2:
+    print(letra1, "es mayor alfabéticamente")
+else:
+    print(letra2, "es mayor alfabéticamente")
+
+# Ejercicio 14: Descuento por cantidad de compra
+total = float(input("Ingrese el total de la compra: "))
+if total > 100:
+    print("Descuento del 10%. Total final:", total * 0.9)
+else:
+    print("Sin descuento. Total final:", total)
+
+# Ejercicio 15: Número entre 1 y 100
+num = int(input("Ingrese un número: "))
+if 1 <= num <= 100:
+    print("El número está entre 1 y 100.")
+else:
+    print("El número está fuera del rango.")

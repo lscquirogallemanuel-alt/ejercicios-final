@@ -1,0 +1,42 @@
+# Ejercicio 16: Año bisiesto
+año = int(input("Ingrese un año: "))
+if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+    print("El año es bisiesto")
+else:
+    print("El año no es bisiesto")
+
+# Ejercicio 17: Paridad de tres números
+a = int(input("Ingrese el primer número: "))
+b = int(input("Ingrese el segundo número: "))
+c = int(input("Ingrese el tercer número: "))
+pares = (a % 2 == 0) + (b % 2 == 0) + (c % 2 == 0)
+if pares == 3:
+    print("Todos son pares")
+elif pares == 0:
+    print("Todos son impares")
+else:
+    print("Hay mezcla")
+
+# Ejercicio 18: Comparación de dos letras
+letra1 = input("Ingrese la primera letra: ")
+letra2 = input("Ingrese la segunda letra: ")
+if letra1 == letra2:
+    print("Son iguales")
+elif letra1 > letra2:
+    print(letra1, "es mayor alfabéticamente")
+else:
+    print(letra2, "es mayor alfabéticamente")
+
+# Ejercicio 19: Descuento por cantidad de compra
+total = float(input("Ingrese el total de la compra: "))
+if total > 100:
+    print("Descuento del 10%. Total final:", total * 0.9)
+else:
+    print("Sin descuento. Total final:", total)
+
+# Ejercicio 20: Número entre 1 y 100
+num = int(input("Ingrese un número: "))
+if 1 <= num <= 100:
+    print("El número está entre 1 y 100.")
+else:
+    print("El número está fuera del rango.")

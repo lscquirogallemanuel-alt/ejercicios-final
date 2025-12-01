@@ -1,0 +1,131 @@
+# Ejercicio 1: Código de descuento
+codigo = input("Ingrese el código de descuento: ").upper()
+precio = float(input("Ingrese el precio original: "))
+
+if codigo == "DESC10":
+    print("Precio final:", precio * 0.90)
+elif codigo == "DESC20":
+    print("Precio final:", precio * 0.80)
+elif codigo == "DESC50":
+    print("Precio final:", precio * 0.50)
+else:
+    print("Código inválido. Precio final:", precio)
+
+
+# Ejercicio 2: Detector de fraude bancario
+transferencia = float(input("Monto de la transferencia: "))
+saldo = float(input("Saldo disponible: "))
+
+if transferencia > saldo:
+    print("Transacción fraudulenta: monto mayor al saldo.")
+elif transferencia > saldo * 0.8:
+    print("Transacción sospechosa: supera el 80% del saldo.")
+else:
+    print("Transacción permitida.")
+
+
+# Ejercicio 3: Clasificación de temperatura
+temp = float(input("Ingrese la temperatura: "))
+
+if temp < 0:
+    print("Muy frío")
+elif temp < 15:
+    print("Frío")
+elif temp < 25:
+    print("Tibio")
+elif temp < 35:
+    print("Caliente")
+else:
+    print("Muy caliente")
+
+
+# Ejercicio 4: Día de la semana
+num = int(input("Ingrese un número del 1 al 7: "))
+
+if num == 1:
+    print("Lunes")
+elif num == 2:
+    print("Martes")
+elif num == 3:
+    print("Miércoles")
+elif num == 4:
+    print("Jueves")
+elif num == 5:
+    print("Viernes")
+elif num == 6:
+    print("Sábado")
+elif num == 7:
+    print("Domingo")
+else:
+    print("Número inválido")
+
+
+# Ejercicio 5: Penalización por días de retraso
+dias = int(input("Ingrese días de retraso: "))
+
+if dias == 0:
+    print("Sin multa.")
+elif dias <= 5:
+    print("Multa: $", dias * 2000)
+elif dias <= 15:
+    print("Multa: $", dias * 3000)
+else:
+    print("Multa: $", dias * 5000)
+
+
+# Ejercicio 6: Calificación de cinco asignaturas
+c1 = float(input("Nota 1: "))
+c2 = float(input("Nota 2: "))
+c3 = float(input("Nota 3: "))
+c4 = float(input("Nota 4: "))
+c5 = float(input("Nota 5: "))
+
+prom = (c1 + c2 + c3 + c4 + c5) / 5
+print("Promedio:", prom)
+
+if prom < 3:
+    print("Desempeño: Bajo")
+elif prom < 4:
+    print("Desempeño: Medio")
+else:
+    print("Desempeño: Alto")
+
+
+# Ejercicio 7: Cálculo de calificaciones finales
+tareas = float(input("Nota de tareas (30%): "))
+proyectos = float(input("Nota de proyectos (30%): "))
+examenes = float(input("Nota de exámenes (40%): "))
+
+final = (tareas * 0.30) + (proyectos * 0.30) + (examenes * 0.40)
+print("Nota final:", final)
+
+
+# Ejercicio 8: Comparación de edades
+e1 = int(input("Edad 1: "))
+e2 = int(input("Edad 2: "))
+e3 = int(input("Edad 3: "))
+
+mayor = max(e1, e2, e3)
+menor = min(e1, e2, e3)
+
+print("Mayor:", mayor)
+print("Menor:", menor)
+
+
+# Ejercicio 9: Año de nacimiento basado en edad
+edad = int(input("Ingrese su edad: "))
+from datetime import datetime
+año_actual = datetime.now().year
+
+print("Año de nacimiento:", año_actual - edad)
+
+
+# Ejercicio 10: Temperatura de ebullición y congelación
+temp = float(input("Ingrese temperatura: "))
+
+if temp <= 0:
+    print("Está en rango de congelación.")
+elif temp >= 100:
+    print("Está en rango de ebullición.")
+else:
+    print("Temperatura normal.")

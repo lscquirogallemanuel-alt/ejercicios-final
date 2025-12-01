@@ -1,0 +1,145 @@
+# Ejercicio 1: Cálculo de salario con horas extra
+horas = float(input("Ingrese las horas trabajadas: "))
+pago = float(input("Ingrese el pago por hora: "))
+
+if horas > 40:
+    extra = horas - 40
+    salario = (40 * pago) + (extra * pago * 1.5)
+else:
+    salario = horas * pago
+
+print("El salario total es:", salario)
+
+
+# Ejercicio 2: Clasificación de IMC
+peso = float(input("Ingrese su peso en kg: "))
+altura = float(input("Ingrese su altura en metros: "))
+imc = peso / (altura ** 2)
+
+if imc < 18.5:
+    print("Bajo peso")
+elif imc < 25:
+    print("Normal")
+elif imc < 30:
+    print("Sobrepeso")
+else:
+    print("Obesidad")
+
+
+# Ejercicio 3: Año escolar
+mes = input("Ingrese un mes (en minúsculas, ej: marzo): ")
+
+meses_escolares = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+                   "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+if mes not in meses_escolares:
+    print("Mes inválido")
+else:
+    if mes in ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio"]:
+        print("Ciclo escolar")
+    else:
+        print("Vacaciones")
+
+
+# Ejercicio 4: Calculadora de números complejos
+num1 = complex(input("Ingrese el primer número complejo (ej: 3+2j): "))
+num2 = complex(input("Ingrese el segundo número complejo: "))
+op = input("Operador (+, -, *, /): ")
+
+if op == "+":
+    print("Resultado:", num1 + num2)
+elif op == "-":
+    print("Resultado:", num1 - num2)
+elif op == "*":
+    print("Resultado:", num1 * num2)
+elif op == "/":
+    if num2 != 0:
+        print("Resultado:", num1 / num2)
+    else:
+        print("Error: división por cero.")
+else:
+    print("Operador no válido")
+
+
+# Ejercicio 5: Calculadora de impuestos
+ingreso = float(input("Ingrese su ingreso anual: "))
+
+if ingreso <= 10000:
+    impuesto = ingreso * 0.05
+elif ingreso <= 30000:
+    impuesto = ingreso * 0.10
+elif ingreso <= 60000:
+    impuesto = ingreso * 0.15
+else:
+    impuesto = ingreso * 0.20
+
+print("Impuesto a pagar:", impuesto)
+
+
+# Ejercicio 6: Edad para votar
+edad = int(input("Ingrese su edad: "))
+
+if edad >= 18:
+    if edad <= 70:
+        print("Puede votar y es obligatorio")
+    else:
+        print("Puede votar pero no es obligatorio")
+else:
+    print("No puede votar")
+
+
+# Ejercicio 7: Convertidor de unidades de temperatura
+c = float(input("Ingrese temperatura en Celsius: "))
+
+f = (c * 9/5) + 32
+k = c + 273.15
+
+print("Fahrenheit:", f)
+print("Kelvin:", k)
+
+
+# Ejercicio 8: Rango de puntaje
+puntaje = float(input("Ingrese el puntaje (0-100): "))
+
+if puntaje >= 90:
+    print("Rango A")
+elif puntaje >= 80:
+    print("Rango B")
+elif puntaje >= 70:
+    print("Rango C")
+elif puntaje >= 60:
+    print("Rango D")
+else:
+    print("Rango F")
+
+
+# Ejercicio 9: Descuento por categoría de cliente
+categoria = input("Ingrese la categoría (A, B, C, D, E): ").upper()
+precio = float(input("Ingrese el precio total: "))
+
+if categoria == "A":
+    desc = 0.30
+elif categoria == "B":
+    desc = 0.20
+elif categoria == "C":
+    desc = 0.10
+elif categoria == "D":
+    desc = 0.05
+else:
+    desc = 0
+
+total = precio * (1 - desc)
+print("Total con descuento:", total)
+
+
+# Ejercicio 10: Verificación de usuario y contraseña
+usuario = input("Ingrese el usuario: ")
+contraseña = input("Ingrese la contraseña: ")
+
+usuario_correcto = "admin"
+contraseña_correcta = "1234"
+
+if usuario == usuario_correcto and contraseña == contraseña_correcta:
+    print("Acceso concedido")
+else:
+    print("Acceso denegado")

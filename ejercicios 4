@@ -1,0 +1,150 @@
+# 1. Validez de una contraseña
+print("\n1. Validez de una contraseña")
+password = input("Ingresa una contraseña: ")
+
+tiene_mayus = any(c.isupper() for c in password)
+tiene_minus = any(c.islower() for c in password)
+tiene_num = any(c.isdigit() for c in password)
+
+if tiene_mayus and tiene_minus and tiene_num and len(password) >= 8:
+    print("Contraseña válida.")
+else:
+    print("Contraseña inválida.")
+
+
+# 2. Precio con IVA
+print("\n2. Precio con IVA")
+precio = float(input("Precio del producto: "))
+esencial = input("Es esencial? (si/no): ").lower()
+
+if esencial == "si":
+    iva = 0.05
+else:
+    iva = 0.19
+
+total = precio + precio * iva
+print("Precio total con IVA:", total)
+
+
+# 3. Asignación de tipo de sangre
+print("\n3. Asignación de tipo de sangre")
+tipo = input("Ingresa tu tipo de sangre (A, B, AB, O): ").upper()
+
+if tipo == "O":
+    print("Puedes donar a: A, B, AB, O")
+    print("Puedes recibir de: O")
+elif tipo == "A":
+    print("Puedes donar a: A, AB")
+    print("Puedes recibir de: A, O")
+elif tipo == "B":
+    print("Puedes donar a: B, AB")
+    print("Puedes recibir de: B, O")
+elif tipo == "AB":
+    print("Puedes donar a: AB")
+    print("Puedes recibir de: A, B, AB, O")
+else:
+    print("Tipo no válido")
+
+
+# 4. Día de la semana y si es fin de semana
+print("\n4. Día de la semana y si es fin de semana")
+dia = input("Día de la semana: ").lower()
+
+fin_semana = ["sábado", "sabado", "domingo"]
+
+if dia in fin_semana:
+    print("Es fin de semana.")
+else:
+    print("Es día laboral.")
+
+
+# 5. Paridad y multiplicidad
+print("\n5. Multiplicidad y paridad de dos números")
+a = int(input("Número 1: "))
+b = int(input("Número 2: "))
+
+print("A es par." if a % 2 == 0 else "A es impar.")
+print("B es par." if b % 2 == 0 else "B es impar.")
+
+if a != 0 and b % a == 0:
+    print("Uno es múltiplo del otro.")
+elif b != 0 and a % b == 0:
+    print("Uno es múltiplo del otro.")
+else:
+    print("No son múltiplos.")
+
+
+# 6. Descuento según hora
+print("\n6. Descuento en función de la hora de compra")
+hora = int(input("Hora de compra (0-23): "))
+precio_compra = float(input("Precio del producto: "))
+
+if hora < 12:
+    descuento = 0.10
+elif hora > 18:
+    descuento = 0.20
+else:
+    descuento = 0
+
+total_pagar = precio_compra - (precio_compra * descuento)
+
+print("Descuento aplicado:", descuento * 100, "%")
+print("Total a pagar:", total_pagar)
+
+
+# 7. Determinar trimestre
+print("\n7. Determinar el trimestre del año")
+mes = int(input("Número de mes (1-12): "))
+
+if 1 <= mes <= 3:
+    print("Primer trimestre")
+elif 4 <= mes <= 6:
+    print("Segundo trimestre")
+elif 7 <= mes <= 9:
+    print("Tercer trimestre")
+elif 10 <= mes <= 12:
+    print("Cuarto trimestre")
+else:
+    print("Mes inválido")
+
+
+# 8. Edad mínima para alquilar auto
+print("\n8. Edad mínima para alquilar un auto")
+edad = int(input("Edad de la persona: "))
+
+if edad < 21:
+    print("No puede alquilar.")
+elif 21 <= edad <= 25:
+    print("Puede alquilar pero con cargo adicional del 15%.")
+else:
+    print("Puede alquilar sin cargos adicionales.")
+
+
+# 9. Categoría de examen
+print("\n9. Categoría de un examen")
+nota = float(input("Ingresa la nota (0-100): "))
+
+if nota < 50:
+    print("Muy deficiente")
+elif nota < 64:
+    print("Deficiente")
+elif nota < 75:
+    print("Regular")
+elif nota < 89:
+    print("Buena")
+else:
+    print("Excelente")
+
+
+# 10. Fase de la vida
+print("\n10. Determinar la fase de la vida")
+edad_vida = int(input("Edad: "))
+
+if 0 <= edad_vida <= 12:
+    print("Infancia")
+elif 13 <= edad_vida <= 17:
+    print("Adolescencia")
+elif 18 <= edad_vida <= 59:
+    print("Adultez")
+else:
+    print("Vejez")
